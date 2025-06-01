@@ -1,15 +1,33 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import '../styles/Hero.css';
+import Logo from '../assets/logo.jpg';
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  const handleLogout = () => {
+    localStorage.removeItem("user");
+    navigate("/");
+  };
+
   return (
     <nav>
+      <img src={Logo} />
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/courses">Courses</Link></li>
         <li><Link to="/pricing">Pricing</Link></li>
-        <li><Link to="/dashboard">Dashboard</Link></li>
-        <li><Link to="/login">Login</Link></li>
+
+        {user ? (
+          <>
+            <li><Link to="/dashboard">Dashboard</Link></li>
+            <li><button onClick={handleLogout}>Logout</button></li>
+          </>
+        ) : (
+          <li><Link to="/login">Login</Link></li>
+        )}
       </ul>
     </nav>
   );

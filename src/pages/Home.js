@@ -2,12 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import HeroSection from '../components/HeroSection';
 
 const Home = () => {
   return (
     <div>
       <Navbar />
-      {/* Hero Section */}
+      <HeroSection />
       <section>
         <h1>Level Up Your Skills</h1>
         <p>Join a community of learners and get access to free & premium courses.</p>

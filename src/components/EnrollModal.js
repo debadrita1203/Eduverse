@@ -4,11 +4,11 @@ const EnrollModal = ({ course, onClose }) => {
   return (
     <div className="modal-backdrop">
       <div className="modal">
-        <h2>Subscribe to {course.title}</h2>
+        <h2>Subscribe to {course.name}</h2>
         <form>
-          <input type="text" placeholder="Name" required />
-          <input type="email" placeholder="Email" required />
-          <button type="submit">Subscribe</button>
+          <input type="text" placeholder="Full Name" required />
+          <input type="email" placeholder="Email Address" required />
+          <button type="submit">Subscribe Now</button>
         </form>
         <button onClick={onClose}>Close</button>
       </div>
