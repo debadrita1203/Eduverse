@@ -1,34 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SearchBar from '../components/SearchBar';
 import CourseCard from '../components/CourseCard';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
-// Static placeholder course data for now
-const mockCourses = [
-  {
-    id: 1,
-    title: "React Basics",
-    instructor: "Jane Doe",
-    thumbnail: "https://source.unsplash.com/300x200/?react",
-    price: "Free"
-  },
-  {
-    id: 2,
-    title: "Advanced JavaScript",
-    instructor: "John Smith",
-    thumbnail: "https://source.unsplash.com/300x200/?javascript",
-    price: "$29"
-  }
-];
+import { fetchUdemyCategoryCourses } from '../utils/api';
 
 const Courses = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('react'); // default term
+  const [courses, setCourses] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // Filter courses based on search
-  const filteredCourses = mockCourses.filter(course =>
-    course.title.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  useEffect(() => {
+    setLoading(true);
+    fetchUdemyCategoryCourses('development')
+      .then((data) => {
+        setCourses(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setLoading(false);
+      });
+  }, [searchTerm]);
 
   return (
     <div>
@@ -36,15 +29,29 @@ const Courses = () => {
       <h1>All Courses</h1>
       <SearchBar value={searchTerm} onChange={setSearchTerm} />
 
-      <div className="course-grid">
-        {filteredCourses.length > 0 ? (
-          filteredCourses.map(course => (
-            <CourseCard key={course.id} course={course} />
-          ))
-        ) : (
-          <p>No courses found.</p>
-        )}
-      </div>
+      {loading ? (
+        <p>Loading courses...</p>
+      ) : (
+        <div className="course-grid">
+          {courses.length > 0 ? (
+            courses.map((course) => (
+              <CourseCard
+                key={course.id}
+                course={{
+                  id: course.id,
+                  title: course.title,
+                  instructor: course.visible_instructors?.[0]?.name || 'Instructor',
+                  thumbnail: course.image_100x100 || 'https://source.unsplash.com/300x200/?course',
+                  price: course.price || 'Free',
+                }}
+              />
+            ))
+          ) : (
+            <p>No courses found.</p>
+          )}
+        </div>
+      )}
+
       <Footer />
     </div>
   );

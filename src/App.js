@@ -5,7 +5,7 @@ import CourseDetail from './pages/CourseDetail';
 import Pricing from './pages/Pricing';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
-import '../styles/App.css'
+import './styles/App.css';
 
 function App() {
   return (
