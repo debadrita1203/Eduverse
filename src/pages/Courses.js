@@ -1,55 +1,56 @@
 import React, { useEffect, useState } from 'react';
-import SearchBar from '../components/SearchBar';
-import CourseCard from '../components/CourseCard';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { fetchUdemyCategoryCourses } from '../utils/api';
+import SearchBar from '../components/SearchBar';
+import CourseCard from '../components/CourseCard';
 
 const Courses = () => {
-  const [searchTerm, setSearchTerm] = useState('react'); // default term
-  const [courses, setCourses] = useState([]);
+  const [allCourses, setAllCourses] = useState([]);
+  const [displayedCourses, setDisplayedCourses] = useState([]);
+  const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(true);
 
+  // ✅ Load local courses.json file on page load
   useEffect(() => {
-    setLoading(true);
-    fetchUdemyCategoryCourses('development')
-      .then((data) => {
-        setCourses(data);
-        setLoading(false);
+    fetch('/courses.json')
+      .then((res) => {
+        if (!res.ok) throw new Error("File not found");
+        return res.json();
       })
-      .catch((err) => {
-        console.error(err);
+      .then((data) => {
+        console.log("✅ Loaded courses:", data);
+        setAllCourses(data);
+        setDisplayedCourses(data.slice(0, 20));
         setLoading(false);
       });
-  }, [searchTerm]);
+  }, []);
+  
+
+  // ✅ Handle search
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+    const filtered = allCourses.filter((course) =>
+      (course.name || '').toLowerCase().includes(term.toLowerCase())
+    );
+    setDisplayedCourses(filtered);
+  };
 
   return (
     <div>
       <Navbar />
       <h1>All Courses</h1>
-      <SearchBar value={searchTerm} onChange={setSearchTerm} />
+      <SearchBar onSearch={handleSearch} />
 
       {loading ? (
         <p>Loading courses...</p>
-      ) : (
+      ) : displayedCourses.length > 0 ? (
         <div className="course-grid">
-          {courses.length > 0 ? (
-            courses.map((course) => (
-              <CourseCard
-                key={course.id}
-                course={{
-                  id: course.id,
-                  title: course.title,
-                  instructor: course.visible_instructors?.[0]?.name || 'Instructor',
-                  thumbnail: course.image_100x100 || 'https://source.unsplash.com/300x200/?course',
-                  price: course.price || 'Free',
-                }}
-              />
-            ))
-          ) : (
-            <p>No courses found.</p>
-          )}
+          {displayedCourses.map((course) => (
+            <CourseCard key={course.id} course={course} />
+          ))}
         </div>
+      ) : (
+        <p>No courses found.</p>
       )}
 
       <Footer />

@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "React for Beginners",
+    "code": "0001",
+    "instructor": "Jane Doe",
+    "price": "Free",
+    "thumbnail": "https://media.licdn.com/dms/image/v2/D4D12AQF5LKYv_4CoYw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1695497781676?e=2147483647&v=beta&t=aSGqvPXSceClfW8UfA3jzQVjHg4_JRxb5UW9Fbc0cOQ"
+  },
+  {
+    "id": 2,
+    "name": "Advanced JavaScript",
+    "code": "0002",
+    "instructor": "John Smith",
+    "price": "$29",
+    "thumbnail": "https://images.velog.io/images/soom/post/6d36a847-bd07-479a-9953-76cdc9e5afe2/6288755792019456.jpeg"
+  },
+  {
+    "id": 3,
+    "name": "HTML & CSS Mastery",
+    "code": "0003",
+    "instructor": "Alice Brown",
+    "price": "$19",
+    "thumbnail": "https://e0.pxfuel.com/wallpapers/622/385/desktop-wallpaper-html-css-thumbnail.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Python Programming",
+    "code": "0004",
+    "instructor": "Robert Taylor",
+    "price": "$39",
+    "thumbnail": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/294421655/original/09f354fb4a4efdb5f5393284397f2edff770fea3/do-task-in-python.png"
+  },
+  {
+    "id": 5,
+    "name": "Full Stack Web Development",
+    "code": "0010",
+    "instructor": "Emily Davis",
+    "price": "$49",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPV0S6QPMqXN7rCVsTPsQzKSWcb2mpBU6Z4Q&s"
+  },
+  {
+    "id": 6,
+    "name": "UI/UX Design Basics",
+    "code": "0020",
+    "instructor": "Michael Lee",
+    "price": "$25",
+    "thumbnail": "https://www.guvi.in/blog/wp-content/uploads/2023/07/Future-and-Scope-of-UIUX-Design-300x157.webp"
+  },
+  {
+    "id": 7,
+    "name": "Data Structures in C++",
+    "code": "0030",
+    "instructor": "Nina Patel",
+    "price": "$35",
+    "thumbnail": "https://codedamn-blog.s3.amazonaws.com/wp-content/uploads/2022/11/11115446/data-structures-1.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Intro to Machine Learning",
+    "code": "0040",
+    "instructor": "Daniel Wilson",
+    "price": "$59",
+    "thumbnail": "https://miro.medium.com/v2/resize:fit:1400/1*cG6U1qstYDijh9bPL42e-Q.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Git & GitHub Essentials",
+    "code": "0100",
+    "instructor": "Sara Kim",
+    "price": "Free",
+    "thumbnail": "https://miro.medium.com/v2/resize:fit:1400/1*mtsk3fQ_BRemFidhkel3dA.png"
+  },
+  {
+    "id": 10,
+    "name": "Database Design with MySQL",
+    "code": "0200",
+    "instructor": "Tom Harris",
+    "price": "$27",
+    "thumbnail": "https://img-c.udemycdn.com/course/240x135/3411278_ae32.jpg"
+  },
+  {
+    "id": 11,
+    "name": "DevOps Crash Course",
+    "code": "0300",
+    "instructor": "Linda Thomas",
+    "price": "$45",
+    "thumbnail": "https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149370940.jpg?semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 12,
+    "name": "Android App Development",
+    "code": "0400",
+    "instructor": "Akash Gupta",
+    "price": "$39",
+    "thumbnail": "https://img.freepik.com/free-vector/app-development-illustration_52683-47931.jpg?semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 13,
+    "name": "iOS with Swift",
+    "code": "1000",
+    "instructor": "Rachel Moore",
+    "price": "$42",
+    "thumbnail": "https://devimages-cdn.apple.com/wwdc-services/images/119/4884/4884_wide_250x141_2x.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Cybersecurity Fundamentals",
+    "code": "2000",
+    "instructor": "Victor Chen",
+    "price": "$38",
+    "thumbnail": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/neon-neon-cyber-security-youtube-thumbnail-design-template-5cc92f51b671a497564a98c90dfa0c41_screen.jpg?ts=1728489721"
+  },
+  {
+    "id": 15,
+    "name": "AWS for Developers",
+    "code": "3000",
+    "instructor": "Olivia White",
+    "price": "$59",
+    "thumbnail": "https://www.figma.com/community/resource/0432183c-2ad2-44e6-81f0-86441e6a1223/thumbnail"
+  },
+  {
+    "id": 16,
+    "name": "Cloud Computing with Azure",
+    "code": "4000",
+    "instructor": "George King",
+    "price": "$54",
+    "thumbnail": "https://study.com/cimages/course-image/introduction-to-cloud-computing_1070577_small.jpeg"
+  },
+  {
+    "id": 17,
+    "name": "Linux Command Line",
+    "code": "1004",
+    "instructor": "Zara Ali",
+    "price": "Free",
+    "thumbnail": "https://riseuplabs.com/wp-content/uploads/2024/06/importance-of-linux-programming-for-software-developers-inner-thumbnail.webp"
+  },
+  {
+    "id": 18,
+    "name": "Intro to Blockchain",
+    "code": "2003",
+    "instructor": "Jason Grant",
+    "price": "$61",
+    "thumbnail": "https://t4.ftcdn.net/jpg/04/23/04/45/360_F_423044511_bCUtUzoO2LUAsOJrZzCtkaX7w3FS7SOZ.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Artificial Intelligence Basics",
+    "code": "3002",
+    "instructor": "Amelia Hart",
+    "price": "$47",
+    "thumbnail": "https://media.gettyimages.com/id/1464932994/video/artificial-intelligence-processor-unit-powerful-quantum-ai-component-on-pcb-motherboard-with.jpg?s=640x640&k=20&c=F1yK6Ro8-UZhOdljLktZbRy8xJPCr9KJqleoT8fQXgU="
+  },
+  {
+    "id": 20,
+    "name": "Django Web Framework",
+    "code": "4001",
+    "instructor": "Carlos Rivera",
+    "price": "$36",
+    "thumbnail": "https://www.redbackacademy.com/assets/images/django-training.jpg"
+  }
+]

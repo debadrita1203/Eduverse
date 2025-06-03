@@ -1,44 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import heroImage from '../assets/img2.jpg';
 import learningImage from '../assets/img1.jpg';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import CourseCard from '../components/CourseCard';
 import '../styles/Home.css';
 
-const featuredCourses = [
-  {
-    id: 1,
-    title: "Cloud Computing Essentials",
-    image: "https://source.unsplash.com/300x200/?cloud,computing",
-    author: "GreatStack",
-    price: "$55.99"
-  },
-  {
-    id: 2,
-    title: "Advanced Python Programming",
-    image: "https://source.unsplash.com/300x200/?python",
-    author: "GreatStack",
-    price: "$67.99"
-  },
-  {
-    id: 3,
-    title: "Web Development Bootcamp",
-    image: "https://source.unsplash.com/300x200/?web,react",
-    author: "GreatStack",
-    price: "$74.99"
-  },
-  {
-    id: 4,
-    title: "Cybersecurity Basics",
-    image: "https://source.unsplash.com/300x200/?cybersecurity",
-    author: "GreatStack",
-    price: "$59.49"
-  }
-];
-
-
 const Home = () => {
+  const [allCourses, setAllCourses] = useState([]);
+  const [displayedCourses, setDisplayedCourses] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  // ✅ Load local courses.json file on page load
+  useEffect(() => {
+    fetch('/courses.json')
+      .then((res) => {
+        if (!res.ok) throw new Error("File not found");
+        return res.json();
+      })
+      .then((data) => {
+        console.log("✅ Loaded courses:", data);
+        setAllCourses(data);
+        setDisplayedCourses(data.slice(0, 4));
+        setLoading(false);
+      });
+  }, []);
+
+
   return (
     <div className='home'>
       <Navbar />
@@ -90,22 +79,22 @@ const Home = () => {
       {/* Course Section */}
       <section>
         <div className="heading">
-        <h2>Learn from the best</h2>
-        <p>
-          Discover our top-rated courses across various categories. From coding and design to business and wellness, our courses are crafted to deliver results.
-        </p>
+          <h2>Learn from the best</h2>
+          <p>
+            Discover our top-rated courses across various categories. From coding and design to business and wellness, our courses are crafted to deliver results.
+          </p>
         </div>
-
+        {loading ? (
+        <p>Loading courses...</p>
+      ) : displayedCourses.length > 0 ? (
         <div className="featured-grid">
-          {featuredCourses.map(course => (
-            <div key={course.id} className="featured-card">
-              <img src={course.image} alt={course.title} />
-              <h3>{course.title}</h3>
-              <p>{course.author}</p>
-              <p><strong>{course.price}</strong></p>
-            </div>
+          {displayedCourses.map((course) => (
+            <CourseCard key={course.id} course={course} />
           ))}
         </div>
+      ) : (
+        <p>No courses found.</p>
+      )}
       </section >
 
       <section className="testimonials">
@@ -123,6 +112,14 @@ const Home = () => {
             <p>"Prop Content"</p>
             <div className="testimonial-user">
               <img src="https://i.pravatar.cc/80?img=2" alt="avatar" />
+              <h4>Prop Content</h4>
+              <small>Prop Content</small>
+            </div>
+          </div>
+          <div className="testimonial-card">
+            <p>"Prop Content"</p>
+            <div className="testimonial-user">
+              <img src="https://i.pravatar.cc/80?img=3" alt="avatar" />
               <h4>Prop Content</h4>
               <small>Prop Content</small>
             </div>

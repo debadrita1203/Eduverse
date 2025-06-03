@@ -1,19 +1,16 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// import './CourseCard.css';  optional styling
 
 const CourseCard = ({ course }) => {
-  const navigate = useNavigate();
-
-  const handleClick = () => {
-    navigate(`/courses/${course.id}`);
-  };
-
   return (
-    <div onClick={handleClick} className="course-card">
-      <img src={course.thumbnail} alt={course.title} />
-      <h3>{course.title}</h3>
+    <div className="course-card">
+       <img src={course.thumbnail} alt={course.name} style={{ width: '280px', height: '170px' }} />
+      <h3>{course.name}</h3>
+      <p><strong>Code:</strong> {course.code}</p>
       <p>{course.instructor}</p>
-      <p>{course.price}</p>
+      <p><strong>{course.price}</strong></p>
+      <Link to={`/courses/${course.id}`}>View Details</Link>
     </div>
   );
 };
