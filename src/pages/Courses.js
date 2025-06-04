@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import SearchBar from '../components/SearchBar';
 import CourseCard from '../components/CourseCard';
+import '../styles/Courses.css';
 
 const Courses = () => {
   const [allCourses, setAllCourses] = useState([]);
@@ -36,13 +37,13 @@ const Courses = () => {
   };
 
   return (
-    <div>
+    <div className='course-page'>
       <Navbar />
       <h1>All Courses</h1>
       <SearchBar onSearch={handleSearch} />
 
       {loading ? (
-        <p>Loading courses...</p>
+        <p className='loading'>Loading courses...</p>
       ) : displayedCourses.length > 0 ? (
         <div className="course-grid">
           {displayedCourses.map((course) => (
@@ -50,7 +51,7 @@ const Courses = () => {
           ))}
         </div>
       ) : (
-        <p>No courses found.</p>
+        <p className='loading'>No courses found.</p>
       )}
 
       <Footer />

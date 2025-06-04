@@ -15,8 +15,8 @@
     margin: 0 auto;
 }
 
-.footer-grid>div {
-    text-align: left;
+.footer-grid .address {
+    text-align: left !important;
 }
 
 .site-footer h3 {

@@ -1,0 +1,78 @@
+.login-wrapper {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.login-image-container {
+    max-width: 45%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: left;
+}
+
+.login-image-container img {
+    max-height: 100%;
+    width: auto;
+}
+
+.login-form-container {
+    min-width: 55%;
+    background-color: #e6f6f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-container form {
+    width: 100%;
+    max-width: 500px; /* fixed max width */
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.login-form-container h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 95%;
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+button[type='submit'] {
+    background-color: #087f5b;
+    color: white;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+button[type='submit']:hover {
+    background-color: #066e4e;
+}

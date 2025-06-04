@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/PopupBox.css';
 
 const PopupBox = ({ message, onClose, redirectTo }) => {
   const navigate = useNavigate();
@@ -12,8 +13,8 @@ const PopupBox = ({ message, onClose, redirectTo }) => {
     <div className="popup-overlay">
       <div className="popup-box">
         <p>{message}</p>
-        <div style={{ marginTop: '1rem' }}>
-          <button onClick={onClose} style={{ marginRight: '10px' }}>Cancel</button>
+        <div className="popup-actions">
+          <button onClick={onClose}>Cancel</button>
           <button onClick={handleLogin}>Login</button>
         </div>
       </div>
@@ -21,4 +22,4 @@ const PopupBox = ({ message, onClose, redirectTo }) => {
   );
 };
 
-export default PopupBox; // ✅ Make sure this is at the bottom
+export default PopupBox;

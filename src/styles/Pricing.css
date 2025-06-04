@@ -1,0 +1,105 @@
+.pricing {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.pricing h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 1.5rem 0;
+}
+
+.pricing-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+  width: 300px;
+  min-height: 350px; /* Ensures consistent height */
+  text-align: center;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.pricing-card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #087f5b;
+  margin-bottom: 1rem;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 auto; /* Pushes button to the bottom */
+  flex-grow: 1;
+}
+
+.pricing-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card button {
+  background-color: #087f5b;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  width: 200px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: auto; /* Pushes it down in flex container */
+  &:hover {
+    background-color: #066a4f;
+  }
+}
+
+.feature-table {
+  margin: 4rem auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.feature-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.feature-table th,
+.feature-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.feature-table th {
+  background-color: #f7f7f7;
+  font-weight: 600;
+}
+
+.feature-table td {
+  background-color: #fff;
+}
+
+.feature-table tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
