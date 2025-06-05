@@ -9,13 +9,21 @@ const PopupBox = ({ message, onClose, redirectTo }) => {
     navigate("/login", { state: { from: redirectTo || "/" } });
   };
 
+  const isLoginMessage = message.toLowerCase().includes("log in");
+
   return (
     <div className="popup-overlay">
       <div className="popup-box">
         <p>{message}</p>
         <div className="popup-actions">
-          <button onClick={onClose}>Cancel</button>
-          <button onClick={handleLogin}>Login</button>
+          {isLoginMessage ? (
+            <>
+              <button onClick={onClose}>Cancel</button>
+              <button onClick={handleLogin}>Login</button>
+            </>
+          ) : (
+            <button onClick={onClose}>OK</button>
+          )}
         </div>
       </div>
     </div>

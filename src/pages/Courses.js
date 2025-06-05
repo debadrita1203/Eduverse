@@ -21,7 +21,7 @@ const Courses = () => {
       .then((data) => {
         console.log("✅ Loaded courses:", data);
         setAllCourses(data);
-        setDisplayedCourses(data.slice(0, 20));
+        setDisplayedCourses(data.slice(0, 16));
         setLoading(false);
       });
   }, []);

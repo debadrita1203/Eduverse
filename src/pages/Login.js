@@ -8,12 +8,18 @@ const Login = () => {
   const [email, setEmail] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
-  const redirectPath = location.state?.from || "/dashboard";
+  const redirectPath = location.state?.from || "/";
   const showLoginMessage = location.state?.from !== undefined;
 
   const handleLogin = (e) => {
     e.preventDefault();
-    const user = { username, email, enrolledCourses: [] };
+    const user = {
+      username,
+      email,
+      enrolledCourses: [],
+      plan: 'free', // default to free
+    };
+    
     localStorage.setItem('user', JSON.stringify(user));
     navigate(redirectPath);
   };

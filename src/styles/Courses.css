@@ -9,7 +9,7 @@
     padding: 1.5rem 0;
 }
 
-.loading{
+.loading {
     text-align: center;
     padding-bottom: 70px;
 }
@@ -46,10 +46,11 @@
 
 /* Course Grid */
 .course-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 👈 4 cards per row */
-  gap: 30px;
-  padding: 0 80px 50px 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* 👈 4 cards per row */
+    gap: 30px;
+    padding: 0 80px 50px 80px;
 }
 
 /* Course Card */
@@ -74,15 +75,30 @@
 }
 
 .course-card h3 {
-    font-size: 1.1rem;
-    margin-top: 0.8rem;
+    font-size: 21px;
+    margin: 0.6rem 0;
 }
 
 .course-card p {
-    font-size: 0.9rem;
+    font-size: 18px;
     color: #555;
     margin: 0.4rem 0;
 }
+
+.details-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #066b4c;
+}
+
 
 /*@media (max-width: 600px) {
     .search-bar {

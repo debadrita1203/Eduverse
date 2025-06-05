@@ -30,22 +30,39 @@ const Pricing = () => {
   const location = useLocation();
 
   const handleSelectPlan = (plan) => {
-    const user = JSON.parse(localStorage.getItem("user"));
-
-    if (plan.id === 'premium') {
-      if (!user) {
-        setPopupMessage("Please log in to Upgrade.");
-        setShowPopup(true);
-        return;
-      }
-
-      setSelectedPlan(plan); // show subscription form/modal
-    } else {
-      setPopupMessage("You're already on the Free Plan.");
+    const storedUser = localStorage.getItem("user");
+  
+    if (!storedUser) {
+      setPopupMessage("Please log in to upgrade.");
       setShowPopup(true);
+      return;
     }
+  
+    const user = JSON.parse(storedUser);
+  
+    // Fallback if user.plan isn't set
+    const currentPlan = user.plan || "free";
+  
+    // ✅ Already on selected plan
+    if (currentPlan === plan.id) {
+      setPopupMessage(`You're already on the ${plan.name}.`);
+      setShowPopup(true);
+      return;
+    }
+  
+    // ✅ If selecting Free plan → update user + show confirmation
+    if (plan.id === "free") {
+      user.plan = "free";
+      localStorage.setItem("user", JSON.stringify(user));
+      setPopupMessage("You're now on the Free Plan.");
+      setShowPopup(true);
+      return;
+    }
+  
+    // ✅ Selecting paid plan → show modal
+    setSelectedPlan(plan);
   };
-
+    
   return (
     <div className='pricing'>
       <Navbar />

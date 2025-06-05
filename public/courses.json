@@ -4,15 +4,34 @@
     "name": "React for Beginners",
     "code": "0001",
     "instructor": "Jane Doe",
+    "shortDescription": "Learn React from scratch.",
+    "description": "This comprehensive React course covers JSX, components, hooks, state management, and building real-world projects.",
     "price": "Free",
-    "thumbnail": "https://media.licdn.com/dms/image/v2/D4D12AQF5LKYv_4CoYw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1695497781676?e=2147483647&v=beta&t=aSGqvPXSceClfW8UfA3jzQVjHg4_JRxb5UW9Fbc0cOQ"
+    "duration":"45 minutes",
+    "language": "English",
+    "videoUrl": "https://youtu.be/SqcY0GlETPk?si=FBudb4_kkTrRAbk9",
+    "thumbnail": "https://media.licdn.com/dms/image/v2/D4D12AQFFWwkd6yzvHg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1701879757462?e=2147483647&v=beta&t=oNaV-cRwUtUPVPJGs_mfGKs7w9IDhty97ObZZ3ITKA0",
+    "topics": [
+      "JSX and Components",
+      "useState and useEffect",
+      "React Router",
+      "API Integration",
+      "React Hooks"
+    ],
+    "content": [
+      "Welcome to learn React JS Frontend Web Development for absolute beginners. In this course you will learn the core fundamentals of React JS and Modern JavaScript so that you can start building lightning fast web apps using React JS.",
+      "In this course, you will learn Modern JavaScript and React JS from absolute scratch. you will learn to make AJAX requests to get data from remote API and display into your web application.",
+      "So if you are ready to learn React JS, which is one of the most exciting technology of recent time. please enroll into this course. thank you"
+    ]
   },
   {
     "id": 2,
     "name": "Advanced JavaScript",
     "code": "0002",
     "instructor": "John Smith",
+    "description": "Deep dive into closures, scopes, and the JS engine.",
     "price": "$29",
+    "videoUrl": "https://www.youtube.com/embed/PoRJizFvM7s",
     "thumbnail": "https://images.velog.io/images/soom/post/6d36a847-bd07-479a-9953-76cdc9e5afe2/6288755792019456.jpeg"
   },
   {
@@ -97,14 +116,6 @@
   },
   {
     "id": 13,
-    "name": "iOS with Swift",
-    "code": "1000",
-    "instructor": "Rachel Moore",
-    "price": "$42",
-    "thumbnail": "https://devimages-cdn.apple.com/wwdc-services/images/119/4884/4884_wide_250x141_2x.jpg"
-  },
-  {
-    "id": 14,
     "name": "Cybersecurity Fundamentals",
     "code": "2000",
     "instructor": "Victor Chen",
@@ -112,7 +123,7 @@
     "thumbnail": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/neon-neon-cyber-security-youtube-thumbnail-design-template-5cc92f51b671a497564a98c90dfa0c41_screen.jpg?ts=1728489721"
   },
   {
-    "id": 15,
+    "id": 14,
     "name": "AWS for Developers",
     "code": "3000",
     "instructor": "Olivia White",
@@ -120,31 +131,7 @@
     "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf8ZwQVJ4EjnO8oWqjAZGEy-IbyqfLCcmYHg&s"
   },
   {
-    "id": 16,
-    "name": "Cloud Computing with Azure",
-    "code": "4000",
-    "instructor": "George King",
-    "price": "$54",
-    "thumbnail": "https://study.com/cimages/course-image/introduction-to-cloud-computing_1070577_small.jpeg"
-  },
-  {
-    "id": 17,
-    "name": "Linux Command Line",
-    "code": "1004",
-    "instructor": "Zara Ali",
-    "price": "Free",
-    "thumbnail": "https://riseuplabs.com/wp-content/uploads/2024/06/importance-of-linux-programming-for-software-developers-inner-thumbnail.webp"
-  },
-  {
-    "id": 18,
-    "name": "Intro to Blockchain",
-    "code": "2003",
-    "instructor": "Jason Grant",
-    "price": "$61",
-    "thumbnail": "https://t4.ftcdn.net/jpg/04/23/04/45/360_F_423044511_bCUtUzoO2LUAsOJrZzCtkaX7w3FS7SOZ.jpg"
-  },
-  {
-    "id": 19,
+    "id": 15,
     "name": "Artificial Intelligence Basics",
     "code": "3002",
     "instructor": "Amelia Hart",
@@ -152,7 +139,7 @@
     "thumbnail": "https://media.gettyimages.com/id/1464932994/video/artificial-intelligence-processor-unit-powerful-quantum-ai-component-on-pcb-motherboard-with.jpg?s=640x640&k=20&c=F1yK6Ro8-UZhOdljLktZbRy8xJPCr9KJqleoT8fQXgU="
   },
   {
-    "id": 20,
+    "id": 16,
     "name": "Django Web Framework",
     "code": "4001",
     "instructor": "Carlos Rivera",

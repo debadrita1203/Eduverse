@@ -1,0 +1,112 @@
+.course-detail-page {
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+}
+
+.course-detail-container {
+    display: flex;
+    gap: 30px;
+    padding: 40px;
+    margin: 0 60px;
+}
+
+.course-detail-container h3 {
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.left-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.topics ul li {
+    font-size: 18px;
+    list-style: square;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-content h5 {
+    font-size: 20px;
+    margin: 5px;
+    text-decoration: underline;
+}
+
+.right-content h2 {
+    font-size: 28px;
+    margin: 5px;
+}
+
+.course-desc {
+    font-size: 21px;
+    text-align: justify;
+    margin: 0 5px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.course-inst {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.course-inst span {
+    font-weight: normal !important;
+    margin: 5px;
+    color:#416e94;
+}
+
+.course-price {
+    font-size: 18px;
+    font-weight: 650;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    width: 40px;
+    padding: 10px;
+    background-color: #b1d4f461;
+    color:  #416e94;
+}
+
+.course-dur {
+    font-size: 18px;
+    color:  #416e94;
+    text-decoration: underline;
+    margin: 5px;
+}
+
+.course-lang{
+    font-size: 18px;
+    color:  #416e94;
+    margin: 5px;
+}
+
+.content{
+    text-align: justify;
+    width: 600px;
+    padding: 20px;
+}
+
+.content p {
+    font-size: 18px;
+}
+
+.enroll-button {
+    background-color: #28a745;
+    color: white;
+    margin: 20px;
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    &:hover {
+        background-color: #066b4c;
+    }
+}

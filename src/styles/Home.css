@@ -1,7 +1,7 @@
 /* General layout */
 .home {
     font-family: 'Segoe UI', sans-serif;
-    color: #333;
+    color: #2a2929;
 }
 
 /* Hero Section */
@@ -44,8 +44,8 @@
 
 .hero-content a {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
+    background-color:  #a2c8ea;
+    color: black;
     text-decoration: none;
     border-radius: 5px;
 }
@@ -171,11 +171,12 @@
 section:last-of-type {
     text-align: center;
     padding: 2rem 1rem;
+    background-color: #f0f8ff;
 }
 
 section:last-of-type button {
     padding: 10px 20px;
-    background-color: #ff6600;
+    background-color: #28a745;
     color: white;
     border: none;
     border-radius: 5px;
