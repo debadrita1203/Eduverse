@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { FiClock } from 'react-icons/fi';
-import { FaGlobe } from 'react-icons/fa';
+import { FaTag, FaGlobe } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import PopupBox from '../components/PopupBox'; // Make sure this exists
+import PopupBox from '../components/PopupBox';
 import '../styles/CourseDetail.css';
 
 const CourseDetail = () => {
@@ -12,6 +12,7 @@ const CourseDetail = () => {
   const [course, setCourse] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
+  const [redirectPath, setRedirectPath] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -29,7 +30,8 @@ const CourseDetail = () => {
 
     // Case 1: Not logged in
     if (!user) {
-      setPopupMessage('Please log in to enroll.');
+      setPopupMessage("Please log in to continue.");
+      setRedirectPath('/login');
       setShowPopup(true);
       return;
     }
@@ -47,12 +49,10 @@ const CourseDetail = () => {
     }
 
     // Case 3: Premium course without membership
-    if (!user.membership) {
-      setPopupMessage('This course requires a membership. Redirecting to pricing...');
+    if (user.plan !== "premium") {
+      setPopupMessage("This is a premium course. Please upgrade your plan.");
+      setRedirectPath('/pricing');
       setShowPopup(true);
-      setTimeout(() => {
-        navigate('/pricing', { state: { from: `/courses/${course.id}` } });
-      }, 2000);
       return;
     }
 
@@ -95,7 +95,9 @@ const CourseDetail = () => {
           <h5>{course.shortDescription}</h5>
           <p className="course-desc">{course.description}</p>
           <p className="course-inst">Instructor: <span>{course.instructor}</span></p>
-          <p className="course-price">{course.price}</p>
+          <p className="course-price">
+            <FaTag style={{ marginRight: '8px', color: '#416e94' }} /> {course.price}
+          </p>
           <p className="course-dur">
             <FiClock style={{ marginRight: '8px', color: '#416e94' }} /> {course.duration}
           </p>
@@ -119,10 +121,16 @@ const CourseDetail = () => {
       {showPopup && (
         <PopupBox
           message={popupMessage}
-          onClose={() => setShowPopup(false)}
-          redirectTo={popupMessage.includes('log in') ? '/login' : null}
+          onClose={() => {
+            setShowPopup(false);
+            if (redirectPath) {
+              navigate(redirectPath);
+              setRedirectPath(null); // reset
+            }
+          }}
         />
       )}
+
 
       <Footer />
     </div>

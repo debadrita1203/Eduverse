@@ -66,11 +66,13 @@
   border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
+  opacity: 0.85;
   margin-top: auto; /* Pushes it down in flex container */
   &:hover {
     background-color: #066a4f;
   }
 }
+
 
 .feature-table {
   margin: 4rem auto;

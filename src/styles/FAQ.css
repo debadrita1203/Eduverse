@@ -3,6 +3,7 @@
     margin: 4rem auto;
     padding: 0 1rem;
     text-align: center;
+    background: transparent !important;
 }
 
 .faq-section h2 {

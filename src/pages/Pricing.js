@@ -29,44 +29,47 @@ const Pricing = () => {
   const [popupMessage, setPopupMessage] = useState('');
   const location = useLocation();
 
+  // ✅ Track current plan from localStorage
+  const [currentPlan, setCurrentPlan] = useState(() => {
+    const storedUser = localStorage.getItem("user");
+    return storedUser ? JSON.parse(storedUser).plan || "free" : "free";
+  });
+
   const handleSelectPlan = (plan) => {
     const storedUser = localStorage.getItem("user");
-  
+
     if (!storedUser) {
       setPopupMessage("Please log in to upgrade.");
       setShowPopup(true);
       return;
     }
-  
+
     const user = JSON.parse(storedUser);
-  
-    // Fallback if user.plan isn't set
-    const currentPlan = user.plan || "free";
-  
-    // ✅ Already on selected plan
-    if (currentPlan === plan.id) {
+    const current = user.plan || "free";
+
+    if (current === plan.id) {
       setPopupMessage(`You're already on the ${plan.name}.`);
       setShowPopup(true);
       return;
     }
-  
-    // ✅ If selecting Free plan → update user + show confirmation
+
     if (plan.id === "free") {
       user.plan = "free";
       localStorage.setItem("user", JSON.stringify(user));
       setPopupMessage("You're now on the Free Plan.");
       setShowPopup(true);
+      setCurrentPlan("free");
       return;
     }
-  
-    // ✅ Selecting paid plan → show modal
-    setSelectedPlan(plan);
+
+    setSelectedPlan(plan); // open payment modal
   };
-    
+
   return (
     <div className='pricing'>
       <Navbar />
       <h1>Choose Your Plan</h1>
+
       <div className="pricing-grid">
         {plans.map(plan => (
           <div key={plan.id} className="pricing-card" onClick={() => handleSelectPlan(plan)}>
@@ -75,7 +78,11 @@ const Pricing = () => {
             <ul>
               {plan.features.map((f, idx) => <li key={idx}>{f}</li>)}
             </ul>
-            <button>Select Plan</button>
+            {currentPlan === plan.id ? (
+              <button className="current-plan-btn" disabled>✔ Current Plan</button>
+            ) : (
+              <button>Select Plan</button>
+            )}
           </div>
         ))}
       </div>
@@ -121,16 +128,22 @@ const Pricing = () => {
       </section>
 
       <FAQSection />
-
       <Footer />
 
       {selectedPlan && (
-        <EnrollModal course={selectedPlan} onClose={() => setSelectedPlan(null)} />
+        <EnrollModal
+          course={selectedPlan}
+          onClose={() => {
+            setSelectedPlan(null);
+            const updatedUser = JSON.parse(localStorage.getItem("user"));
+            setCurrentPlan(updatedUser?.plan || "free");
+          }}
+        />
       )}
 
       {showPopup && (
         <PopupBox
-          message="Please log in to upgrade."
+          message={popupMessage}
           onClose={() => setShowPopup(false)}
           redirectTo={location.pathname}
         />

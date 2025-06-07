@@ -58,13 +58,16 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 1rem;
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
     text-align: center;
     transition: box-shadow 0.2s ease;
     background-color: white;
-}
-
-.course-card:hover {
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    height: 370px;
+    &:hover {
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .course-card img {
@@ -82,7 +85,7 @@
 .course-card p {
     font-size: 18px;
     color: #555;
-    margin: 0.4rem 0;
+    margin: 0.4rem 0 auto;
 }
 
 .details-btn {
@@ -92,12 +95,14 @@
     border-radius: 6px;
     text-decoration: none;
     display: inline-block;
+    margin-top: auto;
     transition: background-color 0.2s ease;
+    &:hover {
+        background-color: #066b4c;
+    }
 }
 
-.view-details-btn:hover {
-    background-color: #066b4c;
-}
+
 
 
 /*@media (max-width: 600px) {
