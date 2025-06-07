@@ -66,7 +66,7 @@ const CourseDetail = () => {
     setShowPopup(true);
   };
 
-  if (!course) return <p>Loading course...</p>;
+  if (!course) return <p className='loading'>Loading course...</p>;
 
   return (
     <div className="course-detail-page">

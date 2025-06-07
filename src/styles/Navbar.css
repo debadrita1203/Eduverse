@@ -1,55 +1,74 @@
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background-color: #ffffff;
-    border-bottom: 1px solid #eee;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+nav img {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0;
+}
+
+nav ul li {
+  font-size: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #28a745;
   }
-  
-  nav img {
-    width: 200px;
-    height: auto;
-    object-fit: contain;
+}
+
+nav button {
+  background-color: #28a745;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    background-color: #066b4c;
   }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    gap: 1.5rem;
-    align-items: center;
-    margin: 0;
+}
+
+.logButton{
+  background-color: #28a745;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white !important;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    background-color: #066b4c; 
   }
-  
-  nav ul li {
-    font-size: 1rem;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #007bff;
-  }
-  
-  nav button {
-    background-color: transparent;
-    border: none;
-    color: #007bff;
-    font-weight: 500;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-  }
-  
-  nav button:hover {
-    color: #0056b3;
-  }
-  
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
 import '../styles/Footer.css';
 
 const Footer = () => {
@@ -11,8 +12,10 @@ const Footer = () => {
           <p>📞 +1234567890</p>
           <p>✉️ info@contact.support</p>
           <div className="social-icons">
-            {/* Replace with FontAwesome or icons */}
-            <span>🌐</span><span>📘</span><span>📸</span>
+            <span> <a><FaFacebook /></a> </span>
+            <span> <a><FaInstagram /></a> </span>
+            <span> <a><FaYoutube /></a> </span>
+            <span> <a><FaLinkedin /></a> </span>
           </div>
         </div>
         <div>

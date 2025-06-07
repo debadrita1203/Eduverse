@@ -25,7 +25,7 @@
     text-align: left;
 }
 
-.site-footer p{
+.site-footer p {
     text-align: left;
 }
 
@@ -43,23 +43,23 @@
 .site-footer li {
     margin-bottom: 0.5rem;
     cursor: pointer;
+    &:hover {
+        color: #375c7b;
+    }
 }
 
-.site-footer li:hover {
-    color: #007bff;
-}
-
-.social-icons{
+.social-icons {
     margin-bottom: 20px;
 }
+
 .social-icons span {
     font-size: 1.5rem;
+    color: #416e94;
     margin-right: 0.75rem;
     cursor: pointer;
-}
-
-.social-icons span:hover {
-    color: #007bff;
+    &:hover {
+        color: #375c7b;
+    }
 }
 
 .site-footer .copyright {

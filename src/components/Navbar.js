@@ -25,7 +25,7 @@ const Navbar = () => {
             <li><button onClick={handleLogout}>Logout</button></li>
           </>
         ) : (
-          <li><Link to="/login">Login</Link></li>
+          <li><Link to="/login" className='logButton'>Login</Link></li>
         )}
       </ul>
     </nav>

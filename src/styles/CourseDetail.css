@@ -3,6 +3,15 @@
     color: #333;
 }
 
+.loading {
+    font-size: 1.2rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+ 
+
 .course-detail-container {
     display: flex;
     gap: 30px;
