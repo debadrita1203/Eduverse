@@ -17,7 +17,7 @@ const PopupBox = ({ message, onCancel, onConfirm }) => {
               <button onClick={onConfirm}>Login</button>
             </>
           ) : (
-            <button onClick={onCancel}>OK</button>
+            <button onClick={onConfirm}>OK</button> 
           )}
         </div>
       </div>
