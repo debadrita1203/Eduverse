@@ -144,10 +144,20 @@ const Pricing = () => {
       {showPopup && (
         <PopupBox
           message={popupMessage}
-          onClose={() => setShowPopup(false)}
-          redirectTo={location.pathname}
+          onCancel={() => {
+            setShowPopup(false);
+          }}
+          onConfirm={() => {
+            setShowPopup(false);
+            // Redirect to login if not logged in
+            const isNotLoggedIn = popupMessage.toLowerCase().includes("log in");
+            if (isNotLoggedIn) {
+              window.location.href = "/login"; // or navigate("/login", { state: { from: location.pathname } });
+            }
+          }}
         />
       )}
+
     </div>
   );
 };

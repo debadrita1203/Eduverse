@@ -121,16 +121,19 @@ const CourseDetail = () => {
       {showPopup && (
         <PopupBox
           message={popupMessage}
-          onClose={() => {
+          onCancel={() => {
             setShowPopup(false);
+            setRedirectPath(null); // no redirect on cancel
+          }}
+          onConfirm={() => {
             if (redirectPath) {
               navigate(redirectPath);
-              setRedirectPath(null); // reset
+              setRedirectPath(null);
             }
+            setShowPopup(false);
           }}
         />
       )}
-
 
       <Footer />
     </div>

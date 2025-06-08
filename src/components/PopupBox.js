@@ -1,14 +1,8 @@
+// PopupBox.js
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import '../styles/PopupBox.css';
 
-const PopupBox = ({ message, onClose, redirectTo }) => {
-  const navigate = useNavigate();
-
-  const handleLogin = () => {
-    navigate("/login", { state: { from: redirectTo || "/" } });
-  };
-
+const PopupBox = ({ message, onCancel, onConfirm }) => {
   const isLoginMessage = message.toLowerCase().includes("log in");
 
   return (
@@ -18,11 +12,11 @@ const PopupBox = ({ message, onClose, redirectTo }) => {
         <div className="popup-actions">
           {isLoginMessage ? (
             <>
-              <button onClick={onClose}>Cancel</button>
-              <button onClick={handleLogin}>Login</button>
+              <button onClick={onCancel}>Cancel</button>
+              <button onClick={onConfirm}>Login</button>
             </>
           ) : (
-            <button onClick={onClose}>OK</button>
+            <button onClick={onCancel}>OK</button>
           )}
         </div>
       </div>
