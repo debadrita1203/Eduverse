@@ -55,7 +55,7 @@ const CheckoutForm = ({ course, onClose }) => {
       {showPopup && (
         <PopupBox
           message={popupMessage}
-          onClose={() => {
+          onCancel={() => {
             setShowPopup(false);
             onClose(); // close modal
           }}

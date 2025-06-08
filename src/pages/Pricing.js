@@ -27,7 +27,7 @@ const Pricing = () => {
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
-  const location = useLocation();
+   const location = useLocation();
   const navigate = useNavigate();
 
   // ✅ Track current plan from localStorage
