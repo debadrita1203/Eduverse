@@ -3,6 +3,7 @@ import React from 'react';
 import '../styles/PopupBox.css';
 
 const PopupBox = ({ message, onCancel, onConfirm }) => {
+  
   const isLoginMessage = message.toLowerCase().includes("log in");
 
   return (

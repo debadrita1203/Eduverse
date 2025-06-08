@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { FaCheck, FaTimes } from 'react-icons/fa';
 import EnrollModal from '../components/EnrollModal';
 import PopupBox from '../components/PopupBox';
@@ -28,6 +28,7 @@ const Pricing = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [popupMessage, setPopupMessage] = useState('');
   const location = useLocation();
+  const navigate = useNavigate();
 
   // ✅ Track current plan from localStorage
   const [currentPlan, setCurrentPlan] = useState(() => {
@@ -152,7 +153,7 @@ const Pricing = () => {
             // Redirect to login if not logged in
             const isNotLoggedIn = popupMessage.toLowerCase().includes("log in");
             if (isNotLoggedIn) {
-              window.location.href = "/login"; // or navigate("/login", { state: { from: location.pathname } });
+              navigate("/login", { state: { from: location.pathname } });
             }
           }}
         />

@@ -16,7 +16,7 @@ const CourseDetail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch('/courses.json')
+    fetch(`${process.env.PUBLIC_URL}/courses.json`)
       .then(res => res.json())
       .then(data => {
         const found = data.find(course => course.id.toString() === id);

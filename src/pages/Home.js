@@ -14,7 +14,7 @@ const Home = () => {
 
   // ✅ Load local courses.json file on page load
   useEffect(() => {
-    fetch('/courses.json')
+    fetch(`${process.env.PUBLIC_URL}/courses.json`)
       .then((res) => {
         if (!res.ok) throw new Error("File not found");
         return res.json();
