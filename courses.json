@@ -1,0 +1,196 @@
+[
+  {
+    "id": 1,
+    "name": "React for Beginners",
+    "code": "0001",
+    "instructor": "Jane Doe",
+    "shortDescription": "Learn React from scratch.",
+    "description": "This comprehensive React course covers JSX, components, hooks, state management, and building real-world projects.",
+    "price": "Free",
+    "duration": "1hour 53 minutes",
+    "language": "English",
+    "videoUrl": "https://youtu.be/SqcY0GlETPk?si=FBudb4_kkTrRAbk9",
+    "thumbnail": "https://media.licdn.com/dms/image/v2/D4D12AQFFWwkd6yzvHg/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1701879757462?e=2147483647&v=beta&t=oNaV-cRwUtUPVPJGs_mfGKs7w9IDhty97ObZZ3ITKA0",
+    "topics": [
+      "JSX and Components",
+      "useState and useEffect",
+      "React Router",
+      "API Integration",
+      "React Hooks"
+    ],
+    "content": [
+      "Welcome to learn React JS Frontend Web Development for absolute beginners. In this course you will learn the core fundamentals of React JS and Modern JavaScript so that you can start building lightning fast web apps using React JS.",
+      "In this course, you will learn Modern JavaScript and React JS from absolute scratch. you will learn to make AJAX requests to get data from remote API and display into your web application.",
+      "So if you are ready to learn React JS, which is one of the most exciting technology of recent time. please enroll into this course. thank you"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Advanced JavaScript",
+    "code": "0002",
+    "instructor": "John Smith",
+    "shortDescription": "Deep dive into closures, scopes, and the JS engine.",
+    "description": "Learn how Javascript works, some basic API's and finally create a mini project.",
+    "price": "Premium",
+    "duration": "6 hour 30 minutes",
+    "language": "English",
+    "videoUrl": "https://www.youtube.com/embed/PoRJizFvM7s",
+    "thumbnail": "https://images.velog.io/images/soom/post/6d36a847-bd07-479a-9953-76cdc9e5afe2/6288755792019456.jpeg",
+    "topics": [
+      "Learn basic syntax that can apply to any language.",
+      "Learn what is a programming language and the basic concepts for beginners.",
+      "Understand what is Javascript in it's truest form.",
+      "Know the basic syntax of Javascript.",
+      "Know some hidden quirks in Javascript."
+    ],
+    "content": [
+      "Learn the Javascript essentials for web development or any type of programming. Learn all the basics of Javascript including primitive types, arrays, functions, assignment operators, the window object and much more. Also I'll provide clear explanations of objects, constructors and arrays in a clear way for anyone to understand. We'll also dive into some more detail about how Javascript works and even advanced topics like prototype inheritance, scope, execution context and much more. So why should you learn Javascript? Well it's everywhere and is getting even bigger in 2016. It's available to mobile apps, desktop apps, server side nodeJS technology and as always in every single browser around the world. There has never been a better time to learn the basics of Javascript!"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "HTML & CSS Mastery",
+    "code": "0003",
+    "instructor": "Alice Brown",
+    "shortDescription": "Web Development From Scratch",
+    "description": "Learn to build stunning, responsive websites with zero experience. Understand the building blocks of the web, and bring your ideas to life with hands-on projects and real-world layouts.",
+    "price": "Free",
+    "duration": "1 hour 11 minutes",
+    "language": "English",
+    "videoUrl": "https://youtu.be/SqcY0GlETPk?si=FBudb4_kkTrRAbk9",
+    "thumbnail": "https://e0.pxfuel.com/wallpapers/622/385/desktop-wallpaper-html-css-thumbnail.jpg",
+    "topics": [
+      "Create your very first website from scratch",
+      "Learn what a website actually is, and what its made of",
+      "Learn the basics of HTML / HTML5",
+      "Learn the basics of CSS/ CSS3"
+    ],
+    "content": [
+      "If you're looking to get a start on learning the new, fun, and profitable skill of web development, then this course is for you. Instead of teaching tedious theory on how to code a website, you'll learn practical knowledge on how to do it. The best way to learn is by doing, and that's why you'll actually make a complete website from scratch. You'll learn two different methods, by writing the code from scratch, and using Dreamweaver, a tool that every web developer should have. You'll learn the advantages and disadvantages to using each method, and be able to see your work come to life!"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Python Programming",
+    "code": "0004",
+    "instructor": "Robert Taylor",
+    "shortDescription": "Learn Python from scratch — perfect for beginners!",
+    "description": "This course is your complete introduction to programming with Python. Through hands-on projects and simple explanations, you’ll gain the confidence to build real-world Python applications and start your journey into software development, data science, or automation.",
+    "price": "Premium",
+    "duration": "3 hour 59 minutes",
+    "language": "English",
+    "videoUrl": "https://youtu.be/SqcY0GlETPk?si=FBudb4_kkTrRAbk9",
+    "thumbnail": "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/294421655/original/09f354fb4a4efdb5f5393284397f2edff770fea3/do-task-in-python.png",
+    "topics": [
+      "Understand Python Basics",
+      "Learn how to use conditional statements and loops",
+      "Master Python Functions and Object Oriented Programming in Python",
+      "Work with Data Structures",
+      "Error HandlingLearn basic syntax that can apply to any language."
+    ],
+    "content": [
+      "In this course you will learn everything from scratch supported by real-world examples and practical demonstrations. Each chapter comes with a bunch of exercises to test your understanding and problem solving skills. By the end of this course, you will be able to write short programs in Python and will be ready to start with more advanced topics in Python. Do not worry if you do not have programming experience, I will start from scratch and proceed step-by-step in out journey of learning.",
+      "Python is one of the most versatile, beginner-friendly, and in-demand programming languages today. Whether you want to build websites, automate tasks, analyze data, or develop AI applications, Python makes it easy with its simple syntax and powerful libraries.",
+      "High demand – Widely used in automation, web development, data science, and AI.",
+      "Easy to learn – Beginner-friendly with a clean, readable syntax.",
+      "Boost productivity – Automate repetitive tasks and write efficient code.",
+      "Strong community support – Tons of resources, tutorials, and job opportunities"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Full Stack Web Development",
+    "code": "0010",
+    "instructor": "Emily Davis",
+    "price": "Premium",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPV0S6QPMqXN7rCVsTPsQzKSWcb2mpBU6Z4Q&s"
+  },
+  {
+    "id": 6,
+    "name": "UI/UX Design Basics",
+    "code": "0020",
+    "instructor": "Michael Lee",
+    "price": "Premium",
+    "thumbnail": "https://www.guvi.in/blog/wp-content/uploads/2023/07/Future-and-Scope-of-UIUX-Design-300x157.webp"
+  },
+  {
+    "id": 7,
+    "name": "Data Structures in C++",
+    "code": "0030",
+    "instructor": "Nina Patel",
+    "price": "Free",
+    "thumbnail": "https://codedamn-blog.s3.amazonaws.com/wp-content/uploads/2022/11/11115446/data-structures-1.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Intro to Machine Learning",
+    "code": "0040",
+    "instructor": "Daniel Wilson",
+    "price": "Free",
+    "thumbnail": "https://miro.medium.com/v2/resize:fit:1400/1*cG6U1qstYDijh9bPL42e-Q.jpeg"
+  },
+  {
+    "id": 9,
+    "name": "Git & GitHub Essentials",
+    "code": "0100",
+    "instructor": "Sara Kim",
+    "price": "Premium",
+    "thumbnail": "https://miro.medium.com/v2/resize:fit:1400/1*mtsk3fQ_BRemFidhkel3dA.png"
+  },
+  {
+    "id": 10,
+    "name": "Database Design with MySQL",
+    "code": "0200",
+    "instructor": "Tom Harris",
+    "price": "Premium",
+    "thumbnail": "https://img-c.udemycdn.com/course/240x135/3411278_ae32.jpg"
+  },
+  {
+    "id": 11,
+    "name": "DevOps Crash Course",
+    "code": "0300",
+    "instructor": "Linda Thomas",
+    "price": "Premium",
+    "thumbnail": "https://img.freepik.com/free-vector/gradient-devops-illustration_23-2149370940.jpg?semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 12,
+    "name": "Android App Development",
+    "code": "0400",
+    "instructor": "Akash Gupta",
+    "price": "Premium",
+    "thumbnail": "https://img.freepik.com/free-vector/app-development-illustration_52683-47931.jpg?semt=ais_hybrid&w=740"
+  },
+  {
+    "id": 13,
+    "name": "Cybersecurity Fundamentals",
+    "code": "1000",
+    "instructor": "Victor Chen",
+    "price": "Free",
+    "thumbnail": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/neon-neon-cyber-security-youtube-thumbnail-design-template-5cc92f51b671a497564a98c90dfa0c41_screen.jpg?ts=1728489721"
+  },
+  {
+    "id": 14,
+    "name": "AWS for Developers",
+    "code": "2000",
+    "instructor": "Olivia White",
+    "price": "Premium",
+    "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSf8ZwQVJ4EjnO8oWqjAZGEy-IbyqfLCcmYHg&s"
+  },
+  {
+    "id": 15,
+    "name": "Artificial Intelligence Basics",
+    "code": "3000",
+    "instructor": "Amelia Hart",
+    "price": "Free",
+    "thumbnail": "https://media.gettyimages.com/id/1464932994/video/artificial-intelligence-processor-unit-powerful-quantum-ai-component-on-pcb-motherboard-with.jpg?s=640x640&k=20&c=F1yK6Ro8-UZhOdljLktZbRy8xJPCr9KJqleoT8fQXgU="
+  },
+  {
+    "id": 16,
+    "name": "Django Web Framework",
+    "code": "4000",
+    "instructor": "Carlos Rivera",
+    "price": "Premium",
+    "thumbnail": "https://www.redbackacademy.com/assets/images/django-training.jpg"
+  }
+]
