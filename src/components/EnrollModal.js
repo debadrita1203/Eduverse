@@ -38,15 +38,15 @@ const CheckoutForm = ({ course, onClose }) => {
     <>
       <form onSubmit={handleSubmit} className="checkout-form">
         <div className="modal-content">
-          <div className="card-details">
-            <h3>Card Details</h3>
-            <CardElement className="card-element" />
-            <button type="submit">Pay Now</button>
-          </div>
           <div className="plan-details">
             <h3>Subscription</h3>
             <p><strong>{course.name}</strong></p>
             <p>{course.price}</p>
+          </div>
+          <div className="card-details">
+            <h3>Card Details</h3>
+            <CardElement className="card-element" />
+            <button type="submit">Pay Now</button>
           </div>
         </div>
       </form>
