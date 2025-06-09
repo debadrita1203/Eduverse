@@ -7,8 +7,8 @@ const CourseCard = ({ course }) => {
   return (
     <div className="course-card">
       <img src={course.thumbnail} alt={course.name} />
-      <h3>{course.name}</h3>
       <div className="info">
+        <h3>{course.name}</h3>
         <p><strong>Code:</strong> {course.code}</p>
         <p><strong>Instructor:</strong> {course.instructor}</p>
       </div>

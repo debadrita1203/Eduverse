@@ -35,7 +35,6 @@ const Courses = () => {
     );
     setDisplayedCourses(filtered);
   };
-
   
   return (
     <div className='course-page'>
