@@ -131,7 +131,6 @@ const Pricing = () => {
       <FAQSection />
       <Footer />
 
-
       {selectedPlan && (
         <EnrollModal
           course={selectedPlan}

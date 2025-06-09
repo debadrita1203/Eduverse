@@ -101,7 +101,6 @@ const CourseDetail = () => {
           </div>
         </div>
 
-
         <div className="right-content">
 
         <div className="content">

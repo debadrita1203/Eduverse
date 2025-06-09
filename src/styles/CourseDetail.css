@@ -1,194 +1,145 @@
 .course-detail-page {
     font-family: 'Segoe UI', sans-serif;
     color: #333;
-}
-
-.loading {
-    font-size: 1.2rem;
-    height: 100vh;
+    background-color: #fff;
+    padding-bottom: 3rem;
+  }
+  
+  .course-detail-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.course-detail-container {
-    display: flex;
-    gap: 30px;
-    padding: 40px;
-    margin: 0 60px;
-}
-
-.course-detail-container h3 {
-    font-size: 24px;
-    text-decoration: underline;
-}
-
-.left-content {
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+  
+  .left-content {
+    flex: 2;
     display: flex;
     flex-direction: column;
-    width: 600px;
-}
-
-.topics ul li {
-    font-size: 18px;
-    list-style: square;
-}
-
-.right-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.detail h5 {
-    font-size: 20px;
-    margin: 5px;
-    text-decoration: underline;
-}
-
-.detail h2 {
-    font-size: 28px;
-    margin: 5px;
-}
-
-.course-desc {
-    font-size: 21px;
-    text-align: justify;
-    margin: 0 5px;
-    margin-bottom: 20px;
-    margin-top: 5px;
-}
-
-.course-inst {
-    font-size: 20px;
-    font-weight: 700;
-    margin: 5px;
-}
-
-.course-inst span {
-    font-weight: normal !important;
-    margin: 5px;
-    color: #416e94;
-}
-
-.course-price {
-    font-size: 18px;
-    font-weight: 650;
-    margin: 5px;
-    border: none;
+    gap: 1.5rem;
+  }
+  
+  .video video {
+    width: 100%;
+    max-height: 360px;
     border-radius: 10px;
-    color: #416e94;
-}
-
-.course-dur {
-    font-size: 18px;
-    color: #416e94;
-    text-decoration: underline;
-    margin: 5px;
-}
-
-.course-lang {
-    font-size: 18px;
-    color: #416e94;
-    margin: 5px;
-}
-
-.content {
-    text-align: justify;
-    width: 600px;
-}
-
-.content p {
-    font-size: 18px;
-}
-
-.enroll-button {
-    background-color: #28a745;
-    color: white;
-    padding: 12px 250px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .detail h2 {
+    font-size: 2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .detail h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #444;
+  }
+  
+  .detail p {
+    margin: 0.4rem 0;
     font-size: 1rem;
-    border: none;
-    border-radius: 6px;
+  }
+  
+  .course-price,
+  .course-dur,
+  .course-lang {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+  }
+  
+  .enroll-button {
     margin-top: 1rem;
+    background-color: #087f5b;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
     cursor: pointer;
+    width: 220px;
     transition: background-color 0.2s ease;
-
-    &:hover {
-        background-color: #066b4c;
-    }
-}
-
-@media (max-width: 800px) {
+  }
+  
+  .enroll-button:hover {
+    background-color: #06694a;
+  }
+  
+  .right-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .content h3,
+  .topics h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: #222;
+    text-decoration: underline;
+  }
+  
+  .content p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  
+  .topics ul {
+    padding-left: 1.2rem;
+  }
+  
+  .topics li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 1.2rem;
+  }
+  
+  /* =======================
+     📱 Responsive for 800px only
+     ======================= */
+  
+  @media (max-width: 800px) {
     .course-detail-container {
-        display: flex;
-        flex-direction: column;
-        /* stack in column */
-        padding: 1rem;
-        gap: 1.5rem;
+      flex-direction: column;
+      padding: 0 1rem;
     }
-
-    .video {
-        width: 100%;
-    }
-
-    .video video {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-
+  
+    .left-content,
     .right-content {
-        width: 100%;
+      width: 100%;
     }
-
-    .right-content h2 {
-        font-size: 1.6rem;
-        margin-bottom: 0.5rem;
+  
+    .detail h2 {
+      font-size: 1.5rem;
     }
-
-    .right-content h5,
-    .course-desc,
-    .course-inst,
-    .course-price,
-    .course-dur,
-    .course-lang {
-        font-size: 1rem;
-        margin-bottom: 0.6rem;
+  
+    .detail h5 {
+      font-size: 1rem;
     }
-
-    .topics h3 {
-        font-size: 1.3rem;
-        margin-top: 1rem;
-    }
-
-    .topics ul {
-        padding-left: 1rem;
-    }
-
-    .topics li {
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
-    }
-
+  
     .enroll-button {
-        width: 100%;
-        padding: 0.75rem;
-        font-size: 1rem;
-        border-radius: 6px;
-        margin-top: 1rem;
+      width: 100%;
+      font-size: 1rem;
     }
-
-    .left-content {
-        width: 100%;
+  
+    .content p,
+    .topics li {
+      font-size: 0.95rem;
     }
-
-    .left-content h3 {
-        font-size: 1.3rem;
-        margin-bottom: 0.5rem;
+  
+    .video video {
+      height: auto;
     }
-
-    .left-content p {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-}
+  }
+  
