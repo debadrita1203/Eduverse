@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import PopupBox from '../components/PopupBox';
 import '../styles/CourseDetail.css';
 
+
 const CourseDetail = () => {
   const { id } = useParams();
   const [course, setCourse] = useState(null);
@@ -82,29 +83,34 @@ const CourseDetail = () => {
               </video>
             )}
           </div>
-          <div className="content">
+          <div className="detail">
+            <h2>{course.name}</h2>
+            <h5>{course.shortDescription}</h5>
+            <p className="course-desc">{course.description}</p>
+            <p className="course-inst">Instructor: <span>{course.instructor}</span></p>
+            <p className="course-price">
+              <FaTag style={{ marginRight: '8px', color: '#416e94' }} /> {course.price}
+            </p>
+            <p className="course-dur">
+              <FiClock style={{ marginRight: '8px', color: '#416e94' }} /> {course.duration}
+            </p>
+            <p className='course-lang'>
+              <FaGlobe style={{ marginRight: '8px', color: '#416e94' }} /> {course.language}
+            </p>
+            <button className="enroll-button" onClick={handleEnroll}>Enroll Now</button>
+          </div>
+        </div>
+
+
+        <div className="right-content">
+
+        <div className="content">
             <h3>Course Content</h3>
             {course.content?.map((content, index) => (
               <p key={index}>{content}</p>
             ))}
           </div>
-        </div>
-
-        <div className="right-content">
-          <h2>{course.name}</h2>
-          <h5>{course.shortDescription}</h5>
-          <p className="course-desc">{course.description}</p>
-          <p className="course-inst">Instructor: <span>{course.instructor}</span></p>
-          <p className="course-price">
-            <FaTag style={{ marginRight: '8px', color: '#416e94' }} /> {course.price}
-          </p>
-          <p className="course-dur">
-            <FiClock style={{ marginRight: '8px', color: '#416e94' }} /> {course.duration}
-          </p>
-          <p className='course-lang'>
-            <FaGlobe style={{ marginRight: '8px', color: '#416e94' }} /> {course.language}
-          </p>
-
+          
           <div className="topics">
             <h3>What you'll learn</h3>
             <ul>
@@ -114,8 +120,8 @@ const CourseDetail = () => {
             </ul>
           </div>
 
-          <button className="enroll-button" onClick={handleEnroll}>Enroll Now</button>
         </div>
+
       </div>
 
       {showPopup && (

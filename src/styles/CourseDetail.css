@@ -9,8 +9,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
- 
+}
+
 
 .course-detail-container {
     display: flex;
@@ -27,6 +27,7 @@
 .left-content {
     display: flex;
     flex-direction: column;
+    width: 600px;
 }
 
 .topics ul li {
@@ -39,13 +40,13 @@
     flex-direction: column;
 }
 
-.right-content h5 {
+.detail h5 {
     font-size: 20px;
     margin: 5px;
     text-decoration: underline;
 }
 
-.right-content h2 {
+.detail h2 {
     font-size: 28px;
     margin: 5px;
 }
@@ -95,7 +96,6 @@
 .content {
     text-align: justify;
     width: 600px;
-    padding: 20px;
 }
 
 .content p {
@@ -105,15 +105,90 @@
 .enroll-button {
     background-color: #28a745;
     color: white;
-    margin: 20px;
-    padding: 15px;
-    font-size: 20px;
+    padding: 12px 250px;
+    font-size: 1rem;
     border: none;
     border-radius: 6px;
-    text-decoration: none;
+    margin-top: 1rem;
+    cursor: pointer;
     transition: background-color 0.2s ease;
 
     &:hover {
         background-color: #066b4c;
+    }
+}
+
+@media (max-width: 800px) {
+    .course-detail-container {
+        display: flex;
+        flex-direction: column;
+        /* stack in column */
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .video {
+        width: 100%;
+    }
+
+    .video video {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .right-content {
+        width: 100%;
+    }
+
+    .right-content h2 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .right-content h5,
+    .course-desc,
+    .course-inst,
+    .course-price,
+    .course-dur,
+    .course-lang {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+    }
+
+    .topics h3 {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+
+    .topics ul {
+        padding-left: 1rem;
+    }
+
+    .topics li {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .enroll-button {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border-radius: 6px;
+        margin-top: 1rem;
+    }
+
+    .left-content {
+        width: 100%;
+    }
+
+    .left-content h3 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .left-content p {
+        font-size: 1rem;
+        line-height: 1.5;
     }
 }

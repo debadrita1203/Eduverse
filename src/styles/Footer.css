@@ -6,11 +6,13 @@
     border-top: 1px solid #e0e0e0;
 }
 
+
 .footer-grid {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 150px;
+    gap: 60px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -62,9 +64,64 @@
     }
 }
 
+.footer-grid-sub {
+    display: flex;
+    justify-content: row;
+    gap: 60px;
+}
+
 .site-footer .copyright {
     margin-top: 1rem;
     font-size: 0.9rem;
     text-align: center;
     color: #666;
 }
+
+/* Responsive for screen width 750px and below */
+@media (max-width: 800px) {
+    .footer-grid {
+      flex-direction: column;
+      gap: 40px;
+      padding: 1rem;
+      text-align: center;
+      align-items: center;
+    }
+  
+    .footer-grid .address,
+    .site-footer h3,
+    .site-footer p {
+      text-align: center !important;
+    }
+  
+    /* Wrap Company and Courses in a sub-grid */
+    .footer-grid-sub {
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  
+    .footer-grid-sub div {
+      min-width: 130px;
+    }
+  
+    .site-footer h4 {
+      font-size: 1.1rem;
+    }
+  
+    .site-footer p,
+    .site-footer li {
+      font-size: 0.95rem;
+    }
+  
+    .social-icons {
+      justify-content: center;
+    }
+  
+    .social-icons span {
+      font-size: 1.4rem;
+      margin-right: 0.6rem;
+    }
+  }
+  

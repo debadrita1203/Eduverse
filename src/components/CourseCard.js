@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 // import './CourseCard.css';  optional styling
 
 const CourseCard = ({ course }) => {
@@ -7,10 +8,14 @@ const CourseCard = ({ course }) => {
     <div className="course-card">
       <img src={course.thumbnail} alt={course.name} />
       <h3>{course.name}</h3>
-      <p><strong>Code:</strong> {course.code}</p>
-      <p><strong>Instructor:</strong> {course.instructor}</p>
-      <p><strong>{course.price}</strong></p>
-      <Link to={`/courses/${course.id}`} className='details-btn'>View Details</Link>
+      <div className="info">
+        <p><strong>Code:</strong> {course.code}</p>
+        <p><strong>Instructor:</strong> {course.instructor}</p>
+      </div>
+      <div className="info">
+        <p><strong>{course.price}</strong></p>
+        <Link to={`/courses/${course.id}`} className='details-btn'>View Details</Link>
+      </div>
     </div>
   );
 };

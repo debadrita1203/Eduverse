@@ -18,6 +18,7 @@
 }
 
 .pricing-card {
+  border-left: 6px solid  #087f5b;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -104,4 +105,39 @@
 
 .feature-table tr:nth-child(even) td {
   background-color: #f9f9f9;
+}
+
+@media screen and (max-width: 800px) {
+  .pricing-grid {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .pricing-card {
+    width: 90%;
+    max-width: 400px;
+    padding: 1.5rem;
+  }
+
+  .pricing-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .pricing-card p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .pricing-card ul {
+    text-align: left;
+    padding-left: 1rem;
+  }
+
+  .pricing-card button {
+    width: 100%;
+    font-size: 1rem;
+  }
 }

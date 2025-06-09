@@ -18,23 +18,25 @@ const Footer = () => {
             <span> <a><FaLinkedin /></a> </span>
           </div>
         </div>
-        <div>
-          <h4>Company</h4>
-          <ul>
-            <li>About</li>
-            <li>Team</li>
-            <li>Careers</li>
-          </ul>
-        </div>
-        <div>
-          <h4>Courses</h4>
-          <ul>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>FAQ</li>
-            <li>Terms of Service</li>
-            <li>Privacy Policy</li>
-          </ul>
+        <div className="footer-grid-sub">
+          <div>
+            <h4>Company</h4>
+            <ul>
+              <li>About</li>
+              <li>Team</li>
+              <li>Careers</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Courses</h4>
+            <ul>
+              <li>About Us</li>
+              <li>Contact Us</li>
+              <li>FAQ</li>
+              <li>Terms of Service</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
         </div>
       </div>
       <p className="copyright">&copy; {new Date().getFullYear()} EDUVERSE. All rights reserved.</p>

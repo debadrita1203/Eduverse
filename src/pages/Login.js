@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Login.css';
 import logo from '../assets/img2.jpg';
 
+
 const Login = () => {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');

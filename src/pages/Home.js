@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import CourseCard from '../components/CourseCard';
 import '../styles/Home.css';
 
+
 const Home = () => {
   const [allCourses, setAllCourses] = useState([]);
   const [displayedCourses, setDisplayedCourses] = useState([]);

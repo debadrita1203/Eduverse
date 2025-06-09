@@ -3,6 +3,7 @@
     height: 100vh;
     font-family: 'Segoe UI', sans-serif;
     color: #333;
+    background-color: #f0f8ff;
 }
 
 .login-image-container {
@@ -19,7 +20,6 @@
 
 .login-form-container {
     min-width: 55%;
-    background-color: #f0f8ff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +28,8 @@
 
 .login-form-container form {
     width: 100%;
-    max-width: 500px; /* fixed max width */
+    max-width: 500px;
+    /* fixed max width */
     padding: 2rem;
     background-color: white;
     border-radius: 12px;
@@ -75,4 +76,33 @@ button[type='submit'] {
 
 button[type='submit']:hover {
     background-color: #066e4e;
+}
+
+@media (max-width: 800px) {
+    .login-wrapper {
+        display: flex;
+        flex-direction: column;
+        /* for stacking image (hidden on mobile) and form */
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        background-color: #f0f8ff;
+        /* Light blue background */
+        padding: 1rem;
+    }
+
+
+    .login-image-container {
+        display: none;
+    }
+
+    .login-form-container {
+        min-width: 100%;
+        padding: 1.5rem;
+    }
+
+    .login-form-container form {
+        padding: 1.5rem;
+        width: 100%;
+    }
 }
