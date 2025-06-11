@@ -44,7 +44,7 @@
 
 .hero-content a {
     padding: 10px 20px;
-    background-color:  #a2c8ea;
+    background-color: #a2c8ea;
     color: black;
     text-decoration: none;
     border-radius: 5px;
@@ -182,7 +182,7 @@ section:last-of-type button {
     border-radius: 5px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
 
     /* Hero Section */
     .hero {

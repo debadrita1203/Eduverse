@@ -97,19 +97,21 @@ const CourseDetail = () => {
             <p className='course-lang'>
               <FaGlobe style={{ marginRight: '8px', color: '#416e94' }} /> {course.language}
             </p>
-            <button className="enroll-button" onClick={handleEnroll}>Enroll Now</button>
+            <div className="enroll-wrapper">
+              <button className="enroll-button" onClick={handleEnroll}>Enroll Now</button>
+            </div>
           </div>
         </div>
 
         <div className="right-content">
 
-        <div className="content">
+          <div className="content">
             <h3>Course Content</h3>
             {course.content?.map((content, index) => (
               <p key={index}>{content}</p>
             ))}
           </div>
-          
+
           <div className="topics">
             <h3>What you'll learn</h3>
             <ul>

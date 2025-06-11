@@ -74,7 +74,7 @@ button[type="submit"] {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .checkout-form .modal-content {
       flex-direction: column;
       gap: 1.5rem;

@@ -77,8 +77,7 @@
     color: #666;
 }
 
-/* Responsive for screen width 750px and below */
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .footer-grid {
       flex-direction: column;
       gap: 40px;

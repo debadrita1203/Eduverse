@@ -78,7 +78,7 @@ button[type='submit']:hover {
     background-color: #066e4e;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
     .login-wrapper {
         display: flex;
         flex-direction: column;
